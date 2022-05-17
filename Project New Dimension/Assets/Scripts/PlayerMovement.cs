@@ -5,8 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField]
-    float speed = 2;
+    
+    float speed;
 
     Rigidbody rigidbody;
     // Start is called before the first frame update
@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        speed = Input.GetKey(KeyCode.LeftShift) ? 5 : 2;
+
         var direction = Vector3.zero;
         direction += Vector3.left * Input.GetAxis("Vertical");
         //direction += Vector3.forward * Input.GetAxis("Horizontal");
