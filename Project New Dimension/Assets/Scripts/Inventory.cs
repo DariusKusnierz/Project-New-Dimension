@@ -21,9 +21,9 @@ public class Inventory : MonoBehaviour
 
     public event Action OnInventoryChanged;
 
-    public List<GameObject> items = new List<GameObject>();
+    public List<Item> items = new List<Item>();
 
-    public void AddItem(GameObject item)
+    public void AddItem(Item item)
     {
         if (items.Count >= maxItems) return;
         items.Add(item);
@@ -31,7 +31,7 @@ public class Inventory : MonoBehaviour
         if(OnInventoryChanged != null) OnInventoryChanged.Invoke();
     }
 
-    public void RemoveItem(GameObject item)
+    public void RemoveItem(Item item)
     {
         items.Remove(item);
     }
