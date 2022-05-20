@@ -34,5 +34,7 @@ public class Inventory : MonoBehaviour
     public void RemoveItem(Item item)
     {
         items.Remove(item);
+
+        if (OnInventoryChanged != null) OnInventoryChanged.Invoke();
     }
 }
