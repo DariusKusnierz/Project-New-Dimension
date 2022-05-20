@@ -87,8 +87,9 @@ GameObject:
   - component: {fileID: 8313726043308229627}
   - component: {fileID: 4747932158132705734}
   - component: {fileID: 1619179214392652037}
+  - component: {fileID: 4329039200641251126}
   m_Layer: 5
-  m_Name: InventorySlot
+  m_Name: ItemSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -196,3 +197,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4329039200641251126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9010491989992501655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35923e606d335b54087af7ee263aefaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemIcon: {fileID: 4612657709206580814}
