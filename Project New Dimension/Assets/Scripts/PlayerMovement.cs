@@ -7,17 +7,21 @@ public class PlayerMovement : MonoBehaviour
 {
     
     float speed;
+    Inventory inventory;
 
     Rigidbody rigidbody;
     // Start is called before the first frame update
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
+        inventory = Inventory.instance;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E)) inventory.gameObject.SetActive(!inventory.gameObject.active);
+
         speed = Input.GetKey(KeyCode.LeftShift) ? 5 : 2;
 
         var direction = Vector3.zero;
