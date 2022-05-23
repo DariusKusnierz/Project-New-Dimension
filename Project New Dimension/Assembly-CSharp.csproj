@@ -58,6 +58,7 @@
     <Compile Include="Assets\Scripts\Inventory.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\ItemSlot.cs" />
+    <Compile Include="Assets\Scripts\Activator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
