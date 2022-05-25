@@ -7,12 +7,12 @@ public class HP : MonoBehaviour
     [SerializeField]
     int health = 1;
     
-    void AddHP(int points)
+    public void AddHP(int points)
     {
         health += points;
     }
 
-    void TakeHP()
+    public void TakeHP()
     {
         health -= 2;
 
