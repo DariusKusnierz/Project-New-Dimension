@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\HP.cs" />
+    <Compile Include="Assets\Scripts\HPUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
