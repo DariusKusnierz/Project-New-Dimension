@@ -8,6 +8,9 @@ public class HP : MonoBehaviour
     [SerializeField]
     int health = 1;
 
+    [SerializeField]
+    GameObject deathParticle;
+
     public event Action OnHealthChange;
     
     public void AddHP(int points)
@@ -34,7 +37,11 @@ public class HP : MonoBehaviour
 
     void KillObject()
     {
-        //TODO
+        Destroy(gameObject, 0.5f);
+        GameObject particle = Instantiate(deathParticle);
+
+        particle.transform.position = transform.position;
+        particle.transform.rotation = transform.rotation;
     }
 
     public int GetValueHP()
