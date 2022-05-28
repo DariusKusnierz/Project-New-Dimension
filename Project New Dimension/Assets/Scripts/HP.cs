@@ -21,7 +21,10 @@ public class HP : MonoBehaviour
     {
         health -= 2;
 
-        OnHealthChange.Invoke();
+        if(gameObject.name == "Player")
+        {
+            OnHealthChange.Invoke();
+        }
 
         if (health <= 0)
         {
