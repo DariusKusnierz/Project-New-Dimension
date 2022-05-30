@@ -27,7 +27,7 @@ public class Inventory : MonoBehaviour
     {
         if (items.Count >= maxItems) return;
         items.Add(item);
-        Debug.Log("Dodano przedmiot");
+        //Debug.Log("Dodano przedmiot");
         if(OnInventoryChanged != null) OnInventoryChanged.Invoke();
     }
 

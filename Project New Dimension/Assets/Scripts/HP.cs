@@ -38,6 +38,8 @@ public class HP : MonoBehaviour
     void KillObject()
     {
         Destroy(gameObject, 0.5f);
+        gameObject.GetComponent<DropLoot>().dropLoot();
+
         GameObject particle = Instantiate(deathParticle);
 
         particle.transform.position = transform.position;
