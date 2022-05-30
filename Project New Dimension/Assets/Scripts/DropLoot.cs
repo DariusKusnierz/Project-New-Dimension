@@ -11,12 +11,13 @@ public class DropLoot : MonoBehaviour
 
         for (int i = 0; i < loot.Length ; i++)
         {
-            if(Random.Range(0,1) <= loot[i].dropChance)
+            if(Random.Range(0,1) < loot[i].dropChance)
             {
                 item = Instantiate(loot[i].item);
                 item.transform.position = transform.position;
-                item.GetComponent<Rigidbody>()
-                    .AddForce(new Vector3(Random.Range(0.5f, 1f), 1, Random.Range(0.5f, 1f)));
+                item.transform.rotation = transform.rotation;
+                item.GetComponent<Rigidbody>().AddForce(Vector3.up * 50f);
+                    //.AddForce(new Vector3(Random.Range(2.5f, 2f), 5 * 100f, Random.Range(2.5f, 2f)));
             }
         }
     }
