@@ -19,20 +19,20 @@ public class InventoryUI : MonoBehaviour
 
     void Refresh()
     {
-        Debug.Log("Odœwierzanie plecaka");
+        //Debug.Log("Odœwierzanie plecaka");
         for (int i = 0; i < itemsSlots.Length; i++)
         {
             if (i < inventory.items.Count)
             {
                 itemsSlots[i].AddItem(inventory.items[i]);
-                Debug.Log("Umieszczono przedmiot w plecaku");
+                //Debug.Log("Umieszczono przedmiot w plecaku");
             }
             else
             {
                 itemsSlots[i].RemoveItem();
-                Debug.LogWarning(i);
+                //Debug.LogWarning(i);
             }
-            Debug.Log(i);
+            //Debug.Log(i);
         }
     }
 }

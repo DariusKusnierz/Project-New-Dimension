@@ -30,9 +30,10 @@ public class Attack : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && isPlayer && actualBasicAttackCooldown >= basicAttackCooldown)
         {
             other.GetComponent<HP>().TakeHP();
-            Debug.Log("ATACK!!! on " + other.name);
+            //Debug.Log("ATACK!!! on " + other.name);
             StartCoroutine(AttackCooldown());
         }
+
     }
 
     IEnumerator AttackCooldown()
@@ -40,7 +41,7 @@ public class Attack : MonoBehaviour
         while (actualBasicAttackCooldown>0)
         {
             actualBasicAttackCooldown--;
-            Debug.Log(actualBasicAttackCooldown);
+            //Debug.Log(actualBasicAttackCooldown);
             yield return new WaitForSeconds(1f);
         }
         actualBasicAttackCooldown = basicAttackCooldown;

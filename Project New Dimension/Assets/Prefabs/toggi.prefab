@@ -90,6 +90,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 636989824652438211}
+  - component: {fileID: -5841762686823093117}
+  - component: {fileID: 2068879921}
+  - component: {fileID: 2068879924}
+  - component: {fileID: 2068879922}
+  - component: {fileID: 2068879923}
   m_Layer: 0
   m_Name: toggi
   m_TagString: Untagged
@@ -104,7 +109,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 260323062803738745}
-  m_LocalRotation: {x: -0, y: 0.64760274, z: -0, w: 0.7619782}
+  m_LocalRotation: {x: 0, y: 0.64760137, z: 0, w: 0.76197934}
   m_LocalPosition: {x: 0.5747, y: 0.351, z: -1.4573}
   m_LocalScale: {x: 0.7862564, y: 0.7862564, z: 0.7862564}
   m_Children:
@@ -125,6 +130,77 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 80.722, z: 0}
+--- !u!114 &-5841762686823093117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260323062803738745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46bbc36eb91b2804ebfb274f7db6e2c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loot:
+  - item: {fileID: 4164158919740294366, guid: d0c806ff5e2199044a88b39c538d14f2, type: 3}
+    dropChance: 0.6
+  - item: {fileID: 260323062803738745}
+    dropChance: 1
+--- !u!135 &2068879921
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260323062803738745}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &2068879924
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260323062803738745}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2068879922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260323062803738745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3517dce30ff23a947bd73d180916d52c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  deathParticle: {fileID: 1114897349171720605, guid: 6efd8167410caa04280f989fa196cd6b, type: 3}
+--- !u!114 &2068879923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260323062803738745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b31f14dd3c0add4687fe995ae638599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  basicAttackCooldown: 2
 --- !u!1 &543907069229820224
 GameObject:
   m_ObjectHideFlags: 0

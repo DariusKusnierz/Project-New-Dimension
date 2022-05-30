@@ -12,7 +12,7 @@ public class ItemSlot : MonoBehaviour
         item = newItem;
         itemIcon.sprite = item.icon;
         itemIcon.enabled = true;
-        Debug.Log("Ikona przedmiotu aktywna " + gameObject.name);
+        //Debug.Log("Ikona przedmiotu aktywna " + gameObject.name);
     }
 
     public void RemoveItem()
@@ -20,7 +20,7 @@ public class ItemSlot : MonoBehaviour
         item = null;
         itemIcon.sprite = null;
         itemIcon.enabled = false;
-        Debug.Log("Usuniêto ikonê przedmiotu " + gameObject.name);
+        //Debug.Log("Usuniêto ikonê przedmiotu " + gameObject.name);
     }
     
     public void StartRemoving()
