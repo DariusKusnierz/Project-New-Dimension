@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
         var direction = Vector3.zero;
         direction += Vector3.left * Input.GetAxis("Vertical");
         //direction += Vector3.forward * Input.GetAxis("Horizontal");
-        transform.rotation *= Quaternion.Euler(Vector3.up * Input.GetAxis("Horizontal"));
+        transform.rotation *= Quaternion.Euler(Vector3.up * Input.GetAxis("Horizontal")*2);
         transform.position += rigidbody.rotation * direction * speed * Time.deltaTime;
 
     }
