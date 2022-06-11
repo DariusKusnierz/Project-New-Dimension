@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\HP.cs" />
     <Compile Include="Assets\Scripts\DropLoot.cs" />
+    <Compile Include="Assets\Scripts\CameraBehave.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
