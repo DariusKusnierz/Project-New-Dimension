@@ -3200,6 +3200,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e009d56ca3e2e804cbc3b39ab651148a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lowPosition: {x: 0.8, y: 1.5, z: 0}
+  duration: 0.5
+  isComingBack: 0
 --- !u!65 &963194230
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3211,7 +3214,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 2.5}
+  m_Size: {x: 1, y: 1, z: 2.8}
   m_Center: {x: 0, y: 0, z: 0.5}
 --- !u!1001 &966348285
 PrefabInstance:
