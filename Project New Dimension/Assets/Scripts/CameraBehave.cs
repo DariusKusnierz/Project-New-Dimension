@@ -62,7 +62,7 @@ public class CameraBehave : MonoBehaviour
         elapsed += Time.deltaTime;
 
         actualStep = elapsed / duration;
-        Debug.Log("Przybli¿anie: "+actualStep);
+        //Debug.Log("Przybli¿anie: "+actualStep);
         transform.localPosition = Vector3.Lerp(currentPosition, lowPosition, actualStep);
     }
 
@@ -77,7 +77,7 @@ public class CameraBehave : MonoBehaviour
     {
         elapsed += Time.deltaTime;
         actualStep = elapsed / duration;
-        Debug.Log("Oddalanie: " + actualStep);
+        //Debug.Log("Oddalanie: " + actualStep);
         transform.localPosition = Vector3.Lerp(currentPosition, basicPosition, actualStep);
 
         if (transform.localPosition == basicPosition)

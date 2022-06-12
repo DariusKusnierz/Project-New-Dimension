@@ -11,6 +11,13 @@ public class Activator : MonoBehaviour
     }
 
     // TODO - aktywacja po najechaniu myszk¹ i wciœniêciu przycisku np. F
+    //private void OnMouseOver()
+    /*{
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+
+        }
+    }*/
 
     private void OnTriggerEnter(Collider other)
     {
