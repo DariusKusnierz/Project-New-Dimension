@@ -54,6 +54,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Attack.cs" />
+    <Compile Include="Assets\Scripts\CameraBehave.cs" />
     <Compile Include="Assets\Scripts\Activator.cs" />
     <Compile Include="Assets\Scripts\HPUI.cs" />
     <Compile Include="Assets\Scripts\InventoryUI.cs" />
@@ -63,7 +64,8 @@
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\HP.cs" />
     <Compile Include="Assets\Scripts\DropLoot.cs" />
-    <Compile Include="Assets\Scripts\CameraBehave.cs" />
+    <Compile Include="Assets\Scripts\DialogueUI.cs" />
+    <Compile Include="Assets\Scripts\Dialogues.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
