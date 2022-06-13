@@ -22,11 +22,19 @@ public class Dialogues : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 isTalking = true;
-                //dialogueUI.displayText(basicDialogue);
+                dialogueUI.displayText(basicDialogue);
             }
         }
 
         if (!dialogueUI.isActiveAndEnabled)
             isTalking = false;
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.name == "Player" && isTalking)
+        {
+            dialogueUI.activeDialogue(false);
+        }
     }
 }
