@@ -22,7 +22,7 @@ public class Dialogues : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 isTalking = true;
-                dialogueUI.displayText(basicDialogue);
+                //dialogueUI.displayText(basicDialogue);
             }
         }
 
