@@ -9406,6 +9406,7 @@ GameObject:
   - component: {fileID: 1585972982}
   - component: {fileID: 1585972978}
   - component: {fileID: 1585972983}
+  - component: {fileID: 1585972984}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -9512,6 +9513,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1585972984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585972976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d6b634de89de3d4e8505e565207c708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allQuests:
+  - nameQuest: 
+    actualProgress: 0
+    goal: 0
+    isComplete: 0
+    questObject: {fileID: 0}
+  - nameQuest: 
+    actualProgress: 0
+    goal: 0
+    isComplete: 0
+    questObject: {fileID: 0}
 --- !u!1001 &1597051862
 PrefabInstance:
   m_ObjectHideFlags: 0
