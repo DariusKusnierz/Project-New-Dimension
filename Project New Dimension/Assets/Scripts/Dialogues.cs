@@ -6,8 +6,7 @@ public class Dialogues : MonoBehaviour
 {
     DialogueUI dialogueUI;
 
-    [SerializeField]
-    List<string> basicDialogue;
+    public List<string> basicDialogue;
     bool isTalking = false;
 
     void Start()
