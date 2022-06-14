@@ -8142,6 +8142,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5584713557370534375, guid: b7247e17494b4db4694abc58058c5506, type: 3}
   m_PrefabInstance: {fileID: 1383664509}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1384128148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 260323062803738745, guid: 42c819e29455c764bad76078df9ab310, type: 3}
+  m_PrefabInstance: {fileID: 1893814457}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1392131844 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2587141001048697920, guid: e078fd3f1809bbf49a92cd53313e6364, type: 3}
@@ -9526,16 +9531,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allQuests:
-  - nameQuest: 
+  - nameQuest: Kaplica
+    description: "Oczy\u015B\u0107 drog\u0119"
     actualProgress: 0
-    goal: 0
+    goal: 3
     isComplete: 0
-    questObject: {fileID: 0}
-  - nameQuest: 
+    questObject:
+    - {fileID: 1357551793}
+    - {fileID: 1763354636}
+    - {fileID: 1384128148}
+    killQuest: 1
+    collectQuest: 0
+    collect: {fileID: 0}
+  - nameQuest: "Mi\u0119so"
+    description: "Zbierz 3 sztuki mi\u0119sa"
     actualProgress: 0
-    goal: 0
+    goal: 3
     isComplete: 0
-    questObject: {fileID: 0}
+    questObject: []
+    killQuest: 0
+    collectQuest: 1
+    collect: {fileID: 732709184908277813, guid: d0c806ff5e2199044a88b39c538d14f2, type: 3}
+  - nameQuest: "\u015Apioch"
+    description: "Znajd\u017A \u015Apiocha"
+    actualProgress: 0
+    goal: 1
+    isComplete: 0
+    questObject: []
+    killQuest: 0
+    collectQuest: 0
+    collect: {fileID: 0}
 --- !u!1001 &1597051862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10386,7 +10411,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -107.9, y: 13.3}
-  m_SizeDelta: {x: 203.24, y: 17}
+  m_SizeDelta: {x: 228.65, y: 17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1681619750
 MonoBehaviour:
@@ -10714,6 +10739,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 636989824652438211, guid: 42c819e29455c764bad76078df9ab310, type: 3}
   m_PrefabInstance: {fileID: 1133118003}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1763354636 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 260323062803738745, guid: 42c819e29455c764bad76078df9ab310, type: 3}
+  m_PrefabInstance: {fileID: 664543444}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1765250686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10940,6 +10970,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2897015494900623429, guid: cab2e0a4d3e34cb43b56a95379b9afdd, type: 3}
   m_PrefabInstance: {fileID: 759769542}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1814433341 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 260323062803738745, guid: 42c819e29455c764bad76078df9ab310, type: 3}
+  m_PrefabInstance: {fileID: 2108336634}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1814433348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814433341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 646819b1011fe6641b4083c111340606, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questName: "\u015Apioch"
 --- !u!1001 &1830265167
 PrefabInstance:
   m_ObjectHideFlags: 0
