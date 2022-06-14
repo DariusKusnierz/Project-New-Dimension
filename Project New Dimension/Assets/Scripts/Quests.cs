@@ -90,10 +90,12 @@ public class Quest
         if (!isComplete)
         {
             actualProgress++;
-            onQuestsChange.Invoke();
 
             if (actualProgress >= goal)
+            {
                 isComplete = true;
+                onQuestsChange.Invoke();
+            }
         }
     }
     public void checkActivitiOfObjects()
@@ -108,19 +110,23 @@ public class Quest
         if (objects <= goal - actualProgress)
         {
             actualProgress = goal - objects;
-            onQuestsChange.Invoke();
 
             if (goal <= actualProgress)
+            {
                 isComplete = true;
+                onQuestsChange.Invoke();
+            }
         }
     }
 
     public void checkIfCollectedItems(List<Item> items)
     {
         actualProgress = items.FindAll(x => x.itemName == collect.itemName).Count;
-        onQuestsChange.Invoke();
 
         if (goal <= actualProgress)
+        {
             isComplete = true;
+            onQuestsChange.Invoke();
+        }
     }
 }
