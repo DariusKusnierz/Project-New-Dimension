@@ -41,6 +41,8 @@ public class Quests : MonoBehaviour
         questToChange.gainProgress();
     }
 
+    //TODO dodawanie nowych questów
+
     IEnumerator checkingKillQuest(Quest quest)
     {
         while (!quest.isComplete)
