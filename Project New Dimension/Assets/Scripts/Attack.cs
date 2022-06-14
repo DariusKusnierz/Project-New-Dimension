@@ -14,6 +14,8 @@ public class Attack : MonoBehaviour
     int actualBasicAttackCooldown;
     BoxCollider attackArea;
 
+    Animator animationOfAttack;
+
     void Start()
     {
         attackArea = gameObject.GetComponent<BoxCollider>();
@@ -21,6 +23,7 @@ public class Attack : MonoBehaviour
         attackArea.center += Vector3.right * -0.7f;
         attackArea.size = Vector3.one * 0.75f;
 
+        animationOfAttack = GetComponentInChildren<Animator>();
         actualBasicAttackCooldown = basicAttackCooldown;
     }
 
@@ -31,9 +34,15 @@ public class Attack : MonoBehaviour
         {
             other.GetComponent<HP>().TakeHP();
             //Debug.Log("ATACK!!! on " + other.name);
-            StartCoroutine(AttackCooldown());
+            BasicAttack();
         }
 
+    }
+
+    void BasicAttack()
+    {
+        animationOfAttack.SetTrigger("Attack");
+        StartCoroutine(AttackCooldown());
     }
 
     IEnumerator AttackCooldown()
