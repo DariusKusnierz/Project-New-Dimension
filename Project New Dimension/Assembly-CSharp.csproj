@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\DropLoot.cs" />
     <Compile Include="Assets\Scripts\ZuggiBehave.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
+    <Compile Include="Assets\Scripts\ToggiBehave.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
