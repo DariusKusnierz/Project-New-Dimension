@@ -43,6 +43,10 @@ public class ZuggiBehave : MonoBehaviour
             if(distance <= agent.stoppingDistance)
             {
                 //isAttacking = true;
+                lookToPlayer();
+                lookToPlayer();
+                lookToPlayer();
+                lookToPlayer();
                 actualAttackCooldown = attackCooldown;
                 animation.SetFloat("Speed", 0);
                 animation.SetTrigger("Attack");
@@ -61,6 +65,7 @@ public class ZuggiBehave : MonoBehaviour
         Vector3 direction = (player.transform.position - transform.position).normalized;
         Quaternion rotation = Quaternion.LookRotation(new Vector3(direction.x, direction.y, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime);
+        Debug.LogWarning(rotation);
     }
 
     private void OnDrawGizmosSelected()

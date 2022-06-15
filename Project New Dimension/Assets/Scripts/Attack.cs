@@ -18,25 +18,24 @@ public class Attack : MonoBehaviour
 
     void Start()
     {
+        /*
         attackArea = gameObject.GetComponent<BoxCollider>();
         attackArea.isTrigger = true;
         attackArea.center += Vector3.right * -0.7f;
         attackArea.size = Vector3.one * 0.75f;
+        */
 
         animationOfAttack = GetComponentInChildren<Animator>();
         actualBasicAttackCooldown = basicAttackCooldown;
     }
 
-    private void OnTriggerStay(Collider other)
+    private void Update()
     {
-        //Debug.Log(gameObject.name + " widzi " + other.name);
         if (Input.GetMouseButtonDown(0) && isPlayer && actualBasicAttackCooldown >= basicAttackCooldown)
         {
-            other.GetComponent<HP>().TakeHP();
-            //Debug.Log("ATACK!!! on " + other.name);
+            
             BasicAttack();
         }
-
     }
 
     void BasicAttack()
