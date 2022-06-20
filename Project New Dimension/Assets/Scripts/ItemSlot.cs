@@ -7,6 +7,10 @@ public class ItemSlot : MonoBehaviour
 {
     public Image itemIcon;
     Item item;
+
+    [SerializeField]
+    HP playerHP;
+
     public void AddItem(Item newItem)
     {
         item = newItem;
@@ -25,6 +29,7 @@ public class ItemSlot : MonoBehaviour
     
     public void StartRemoving()
     {
+        item.UseItem(playerHP);
         Inventory.instance.RemoveItem(item);
     }
 }
