@@ -35,4 +35,9 @@ public class InventoryUI : MonoBehaviour
             //Debug.Log(i);
         }
     }
+
+    public void disableCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 }

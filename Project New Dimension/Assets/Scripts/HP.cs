@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class HP : MonoBehaviour
 {
+    Finishing finish;
+
     [SerializeField]
     int health = 1;
 
@@ -12,7 +14,12 @@ public class HP : MonoBehaviour
     GameObject deathParticle;
 
     public event Action OnHealthChange;
-    
+
+    private void Start()
+    {
+        finish = Finishing.instance;
+    }
+
     public void AddHP(int points)
     {
         health += points;
@@ -31,7 +38,48 @@ public class HP : MonoBehaviour
 
         if (health <= 0)
         {
-            KillObject();
+            if (gameObject.name == "Player")
+            {
+                rotatePlayerAfterDead();
+                Finish(false);
+            } 
+            else if (gameObject.name == "zuggi")
+            {
+                rotateAfterDead();
+                Finish(true);
+            }
+            else
+            {
+                KillObject();
+            }
+        }
+    }
+
+    public void TakeHP(int hp)
+    {
+        health -= hp;
+
+        if (gameObject.name == "Player")
+        {
+            OnHealthChange.Invoke();
+        }
+
+        if (health <= 0)
+        {
+            if (gameObject.name == "Player")
+            {
+                rotatePlayerAfterDead();
+                Finish(false);
+            }
+            else if (gameObject.name == "zuggi")
+            {
+                rotateAfterDead();
+                Finish(true);
+            }
+            else
+            {
+                KillObject();
+            }
         }
     }
 
@@ -46,8 +94,31 @@ public class HP : MonoBehaviour
         particle.transform.rotation = transform.rotation;
     }
 
+    void Finish(bool win)
+    {
+        Debug.Log("Koñczymy!!!");
+        Cursor.lockState = CursorLockMode.Confined;
+        finish.gameObject.SetActive(true);
+        Time.timeScale = 0;
+        
+        if (win)
+            finish.setWin();
+        else
+            finish.setFail();
+    }
+
     public int GetValueHP()
     {
         return health;
+    }
+
+    void rotateAfterDead()
+    {
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, -90f));
+    }
+
+    void rotatePlayerAfterDead()
+    {
+        GetComponentInChildren<Animator>().gameObject.transform.rotation = Quaternion.Euler(new Vector3(0, 0, -90f));
     }
 }
