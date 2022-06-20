@@ -83,4 +83,6 @@ public class CameraBehave : MonoBehaviour
         if (transform.localPosition == basicPosition)
             isComingBack = false;
     }
+
+    
 }

@@ -21,7 +21,19 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E)) inventory.gameObject.SetActive(!inventory.gameObject.active);
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            inventory.gameObject.SetActive(!inventory.gameObject.active);
+            if(Cursor.lockState == CursorLockMode.Locked)
+            {
+                Cursor.lockState = CursorLockMode.Confined;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+            } 
+
+        }
 
         speed = Input.GetKey(KeyCode.LeftShift) ? 5 : 2.5f;
         animationOfMovement.SetFloat("Speed", speed * Input.GetAxis("Vertical") / 5);
