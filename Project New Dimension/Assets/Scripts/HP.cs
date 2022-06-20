@@ -22,6 +22,8 @@ public class HP : MonoBehaviour
 
     public void AddHP(int points)
     {
+        if (health >= 8) return;
+
         health += points;
 
         OnHealthChange.Invoke();
