@@ -5,6 +5,7 @@ using UnityEngine;
 public class Dialogues : MonoBehaviour
 {
     DialogueUI dialogueUI;
+    TalkCloud talkCloud;
 
     public List<string> basicDialogue;
     bool isTalking = false;
@@ -12,12 +13,15 @@ public class Dialogues : MonoBehaviour
     void Start()
     {
         dialogueUI = DialogueUI.instance;
+        talkCloud = TalkCloud.instance;
     }
 
     private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.name == "Player" && !isTalking)
         {
+            talkCloud.showCloud(gameObject.transform, collision.transform);
+
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 isTalking = true;
@@ -35,5 +39,7 @@ public class Dialogues : MonoBehaviour
         {
             dialogueUI.activeDialogue(false);
         }
+
+        talkCloud.hideCloud();
     }
 }
