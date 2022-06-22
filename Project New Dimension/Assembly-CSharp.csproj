@@ -59,7 +59,7 @@
     <Compile Include="Assets\Scripts\ZuggiBehave.cs" />
     <Compile Include="Assets\Scripts\MainQuest.cs" />
     <Compile Include="Assets\Scripts\CameraBehave.cs" />
-    <Compile Include="Assets\Scenes\Finishing.cs" />
+    <Compile Include="Assets\Scripts\Finishing.cs" />
     <Compile Include="Assets\Scripts\Activator.cs" />
     <Compile Include="Assets\Scripts\DialogueUI.cs" />
     <Compile Include="Assets\Scripts\FindHim.cs" />
@@ -69,14 +69,15 @@
     <Compile Include="Assets\Scripts\HPUI.cs" />
     <Compile Include="Assets\Scripts\InventoryUI.cs" />
     <Compile Include="Assets\Scripts\QuestsUI.cs" />
-    <Compile Include="Assets\Scenes\Menu.cs" />
+    <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\ItemSlot.cs" />
     <Compile Include="Assets\Scripts\Inventory.cs" />
+    <Compile Include="Assets\Scripts\TalkCloud.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\HP.cs" />
     <Compile Include="Assets\Scripts\DropLoot.cs" />
-    <Compile Include="Assets\Scripts\TalkCloud.cs" />
+    <Compile Include="Assets\Scripts\CustomCursor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
