@@ -30,6 +30,7 @@ public class ItemSlot : MonoBehaviour
     public void StartRemoving()
     {
         item.UseItem(playerHP);
+        
         Inventory.instance.RemoveItem(item);
     }
 }
