@@ -9,12 +9,17 @@ public class Item : MonoBehaviour
     public Sprite icon;
     public bool isConsumable = false;
     public int hp = 1;
+    public GameObject objectOfItem;
 
     public void UseItem(HP owner)
     {
         if (isConsumable)
         {
             owner.AddHP(hp);
+        }
+        else
+        {
+            WeaponSlot.instance.ChangeWeapon(this);
         }
     }
 }
