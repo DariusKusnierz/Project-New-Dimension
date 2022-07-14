@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     KeyCode lastPlayerKeyDown = KeyCode.None;
     Vector3 directionOfDash;
+    string currentDashAnimationTrigger;
 
     bool isDashing = false;
     float elapsedDash = 0f;
@@ -75,7 +76,8 @@ public class PlayerMovement : MonoBehaviour
                 lastPlayerKeyDown = KeyCode.None;
 
                 currentPosition = transform.position;
-                targetPosition = transform.position + rigidbody.rotation * directionOfDash * 2.5f;
+                targetPosition = transform.position + rigidbody.rotation * directionOfDash * 3f;
+                animationOfMovement.SetTrigger(currentDashAnimationTrigger);
 
                 Dash();
             }
@@ -85,21 +87,25 @@ public class PlayerMovement : MonoBehaviour
         {
             lastPlayerKeyDown = KeyCode.W;
             directionOfDash = Vector3.left * Input.GetAxisRaw("Vertical");
+            currentDashAnimationTrigger = "DashW";
         }
         else if (Input.GetKeyDown(KeyCode.A))
         {
             lastPlayerKeyDown = KeyCode.A;
             directionOfDash = Vector3.forward * Input.GetAxisRaw("Horizontal");
+            currentDashAnimationTrigger = "DashA";
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
             lastPlayerKeyDown = KeyCode.S;
             directionOfDash = Vector3.left * Input.GetAxisRaw("Vertical");
+            currentDashAnimationTrigger = "DashS";
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
             lastPlayerKeyDown = KeyCode.D;
             directionOfDash = Vector3.forward * Input.GetAxisRaw("Horizontal");
+            currentDashAnimationTrigger = "DashD";
         }
     }
 
