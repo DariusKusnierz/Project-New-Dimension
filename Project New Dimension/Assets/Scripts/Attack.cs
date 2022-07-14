@@ -33,9 +33,15 @@ public class Attack : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && isPlayer && actualBasicAttackCooldown >= basicAttackCooldown)
         {
-            
-            BasicAttack();
+            AnimateAttack();
         }
+    }
+    void AnimateAttack()
+    {
+        if (WeaponSlot.instance.HasWeapon())
+            WeaponAttack();
+        else
+            BasicAttack();
     }
 
     void BasicAttack()
@@ -43,6 +49,13 @@ public class Attack : MonoBehaviour
         animationOfAttack.SetTrigger("Attack");
         StartCoroutine(AttackCooldown());
     }
+
+    void WeaponAttack()
+    {
+        animationOfAttack.SetTrigger("SpearAttack");
+        StartCoroutine(AttackCooldown());
+    }
+
 
     IEnumerator AttackCooldown()
     {
