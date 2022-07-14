@@ -23,10 +23,17 @@ public class WeaponSlot : MonoBehaviour
     GameObject playerHand;
 
     GameObject weapon;
+    public bool HasWeapon()
+    {
+        if (itemIcon.sprite != basicIcon)
+            return true;
+
+        return false;
+    }
 
     public void ChangeWeapon(Item newItem)
     {
-        if (itemIcon.sprite != basicIcon)
+        if (HasWeapon())
         {
             Inventory.instance.AddItem(newItem);
             return;
@@ -40,13 +47,16 @@ public class WeaponSlot : MonoBehaviour
         weapon = Instantiate(item.objectOfItem);
 
         weapon.transform.parent = playerHand.transform;
-        weapon.transform.localPosition = playerHand.transform.localPosition;
-        weapon.transform.localRotation = playerHand.transform.localRotation;
+        //weapon.transform.localPosition = playerHand.transform.localPosition;
+        //weapon.transform.localRotation = playerHand.transform.localRotation;
+
+        weapon.transform.localPosition = new Vector3(-0.0438f, 0.0162f, -0.0158f);
+        weapon.transform.localRotation = Quaternion.Euler(158.322f,-16.84f, -74.346f);
     }
 
     public void RemoveWeapon()
     {
-        if (itemIcon.sprite == basicIcon) return;
+        if (!HasWeapon()) return;
 
         Inventory.instance.AddItem(item);
 
@@ -54,5 +64,6 @@ public class WeaponSlot : MonoBehaviour
         itemIcon.sprite = basicIcon;
         Destroy(weapon);
         playerHand.GetComponent<Collider>().enabled = true;
-    }  
+    }
+    
 }
