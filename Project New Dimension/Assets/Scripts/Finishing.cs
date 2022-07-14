@@ -23,7 +23,7 @@ public class Finishing : MonoBehaviour
     [SerializeField]
     GameObject win;
 
-    int nextScene;
+    string nextScene;
 
     void Start()
     {
@@ -33,14 +33,14 @@ public class Finishing : MonoBehaviour
     public void setWin()
     {
         win.SetActive(true);
-        nextScene = 2;
+        nextScene = "EndWin";
         gameObject.SetActive(true);
     }
 
     public void setFail()
     {
         fail.SetActive(true);
-        nextScene = 3;
+        nextScene = "EndLoose";
         gameObject.SetActive(true);
     }
 
