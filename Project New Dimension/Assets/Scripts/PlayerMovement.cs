@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            inventory.gameObject.SetActive(!inventory.gameObject.active);
+            inventory.gameObject.SetActive(!inventory.gameObject.activeSelf);
             if(Cursor.lockState == CursorLockMode.Locked)
             {
                 Cursor.lockState = CursorLockMode.Confined;

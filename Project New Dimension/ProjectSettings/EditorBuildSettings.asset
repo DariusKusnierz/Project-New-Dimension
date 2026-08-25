@@ -17,4 +17,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndLoose.unity
     guid: 85ac2ebd1a208b84e962673613cf3db1
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3ab862ae374a2ff46a3b6797eef60ab4, type: 3}
